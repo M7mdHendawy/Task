@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!--font awsome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--google fonts cdn-->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--navigation section-->
+    <section class="navigation">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="#">LOGO</a>
+            </div>
+            <nav>
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shopping</a></li>
+                    <li><a href="#">Billing</a></li>
+                    <li><a href="#">receipt</a></li>
+                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <!--End of navigation section -->
+
+    <!--start of main-->
+    <main>
+        <!--start of left section-->
+        <div class="information">
+            <h1>custopmer information > pay method</h1>
+            <a href="#"><img src="./Paypal-Logo-2015.png" alt="paypal"></a>
+            <span class="or">or</span>
+            <form>
+                <h2>Contact information</h2>
+                <input type="text" placeholder="Email Address">
+                <label class="container">keep me up to date on news and exclusive offers
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <h2>Shipping Address</h2>
+                <div class="names">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Apt, suite, etc, (optional)">
+                <input type="text" placeholder="City">
+                <div class="country">
+                    <select>
+                        <option value="States">United States</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="Emirates">Emirates</option>
+                        <option value="Canada">Canada</option>
+                    </select>
+                    <select>
+                        <option value="select">Select States</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="Emirates">Emirates</option>
+                        <option value="Canada">Canada</option>
+                    </select>
+                    <input id="zip" name="zip" type="number" min="1" max="5" placeholder="Zip Code">
+                </div>
+                <input type="text" placeholder="Phone Number">
+                <label class="container"><span>I agree to the</span> terms of use a condition of sale - privacy policy
+                    <input type="checkbox">
+                    <span class="checkmark second-box"></span>
+                </label>
+                <div class="links">
+                    <a href="#">
+                        < Return To Package Selection</a> <a href="#">Continue to payment method
+                    </a>
+                </div>
+            </form>
+
+        </div>
+        <!--End of left section -->
+
+        <!--start of right section-->
+        <div class="stock">
+
+            <div class="price">
+                <div class="cadeau">
+                    <img src="cadeau.png" alt="cadeau">
+                </div>
+                <p>Pet-lab - joint health tub (selection)</p>
+                <span><del>$35</del> $31</span>
+            </div>
+            <div class="price">
+                <div class="gift">
+                    <img src="gift-box.webp" alt="cadeau">
+                </div>
+                <p>extra chance to win $2000 of products</p>
+                <span>FREE</span>
+            </div>
+
+            <div class="total">
+                <p>subtotal<br> shipping</p>
+                <p class="lighter">$75.97 <br>free</p>
+            </div>
+            <div class="total">
+                <p>total</p>
+                <p>$75.97</p>
+            </div>
+
+            <p class="stock-update">
+                <font>stock update :</font> Due to extrem demand shipping times may be <br> setended: Prediced shipping
+                date - 7th Agust
+            </p>
+        </div>
+        <!--End of right section-->
+    </main>
+    <!--End of main -->
+
+    <!--start of footer section-->
+
+    <footer>
+        <ul class="last-nav">
+            <li> <a href="#" target="_blank">Home</a></li>
+            <li> <a href="#" target="_blank">Shipping & Return</a></li>
+            <li> <a href="#" target="_blank">contact us</a></li>
+            <li> <a href="#" target="_blank">Terms & conditions</a></li>
+            <li> <a href="#" target="_blank">privacy</a></li>
+        </ul>
+        <ul class="social">
+            <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+        </ul>
+        <p> 2019© <a href="https://www.facebook.com/Moha.Hendawy">Hendawy</a> All right reserved
+        </p>
+    </footer>
+    <!--End of footer section-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        (function ($) {
+            $(function () {
+                $('nav ul li a:not(:only-child)').click(function (e) {
+                    $(this).siblings('.nav-dropdown').toggle();
+                    $('.nav-dropdown').not($(this).siblings()).hide();
+                    e.stopPropagation();
+                });
+                $('html').click(function () {
+                    $('.nav-dropdown').hide();
+                });
+                $('#nav-toggle').click(function () {
+                    $('nav ul').slideToggle();
+                });
+                $('#nav-toggle').on('click', function () {
+                    this.classList.toggle('active');
+                });
+            });
+        })(jQuery); 
+    </script>
+</body>
+
+</html>
