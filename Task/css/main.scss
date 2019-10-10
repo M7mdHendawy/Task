@@ -300,6 +300,10 @@ main {
             margin-right: 20px;
             margin-bottom: 20px;
 
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+            }
+
             &:focus {
                 background: rgba(255, 197, 197, 0.548);
                 outline: none;
@@ -311,7 +315,10 @@ main {
             border: 1px solid #463f3f75;
             border-radius: 5px;
             padding-left: 5px;
-            width: 20%;
+
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+            }
 
             &:focus {
                 outline: none;
@@ -381,10 +388,12 @@ main {
             &:first-child {
                 color: #2196f3;
                 margin-top: 30px;
-                &:hover{
+
+                &:hover {
                     color: #2b94ebfb;
                     text-decoration: underline;
                 }
+
                 @media only screen and (max-width: 600px) {
                     width: 100%;
                     text-align: center;

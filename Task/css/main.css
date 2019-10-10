@@ -331,6 +331,12 @@ main .country select {
   margin-bottom: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+  main .country select {
+    width: 100%;
+  }
+}
+
 main .country select:focus {
   background: rgba(255, 197, 197, 0.548);
   outline: none;
@@ -341,7 +347,12 @@ main .country #zip {
   border: 1px solid #463f3f75;
   border-radius: 5px;
   padding-left: 5px;
-  width: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+  main .country #zip {
+    width: 100%;
+  }
 }
 
 main .country #zip:focus {
