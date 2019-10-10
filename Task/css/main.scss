@@ -289,15 +289,16 @@ main {
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
+        flex-wrap: wrap;
 
         select {
-            width: 32%;
             border-radius: 5px;
             color: #706969;
             height: 40px;
             padding: 0 42px 0 5px;
             position: relative;
             margin-right: 20px;
+            margin-bottom: 20px;
 
             &:focus {
                 background: rgba(255, 197, 197, 0.548);
